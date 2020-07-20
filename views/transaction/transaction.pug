@@ -1,0 +1,15 @@
+h1 Transaction
+a(href="/transaction/create") create transaction
+ul 
+    each transaction in transactions  
+        li
+            span id_Transaction: #{transaction.id}
+            if transaction.iscomplete 
+                span &nbsp  
+                span completed
+            else
+                span &nbsp
+                a(href="transaction/"+transaction.id+"/completed") complete
+
+
+        

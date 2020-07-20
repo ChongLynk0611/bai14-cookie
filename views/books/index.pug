@@ -1,0 +1,12 @@
+extends ../layout/layout.pug 
+block content
+    h1 List Books
+    a(href="/books/create", class="btn btn-primary btn-lg" ) add Book
+    ul  
+        each book in books 
+            li
+                span=book.title
+                span &nbsp   
+                a(href="/books/edit/"+book.id,class="btn btn-light") edit
+                span &nbsp 
+                a(href="/books/delete/"+book.id,class="btn btn-light") delete
