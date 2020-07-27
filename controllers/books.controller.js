@@ -34,5 +34,6 @@ module.exports.postEdit = (req,res)=>{
     var id = req.params.id;
     var book = db.get('books').find({id:id}).value();
     book.title = req.body.title;
+    db.get('books').write();
     res.redirect('/books'); 
 }

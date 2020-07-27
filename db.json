@@ -24,8 +24,20 @@
     {
       "idBook": "hePMLfnMh",
       "idUser": "btg8PvTX8",
-      "iscomplete": false,
+      "iscomplete": true,
       "id": "a7mCWmuN2"
+    },
+    {
+      "idBook": "7qUJB4nNR",
+      "idUser": "btg8PvTX8",
+      "iscomplete": true,
+      "id": "ITZ_GjPS5"
+    },
+    {
+      "idBook": "7qUJB4nNR",
+      "idUser": "btg8PvTX8",
+      "iscomplete": true,
+      "id": "TP8DlZ7pz"
     }
   ]
 }
