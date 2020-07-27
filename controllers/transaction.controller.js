@@ -43,7 +43,7 @@ module.exports.completed = (req, res)=>{
         res.redirect('/transaction');
         return;
     }
-    res.render('/error/error');
+    res.render('error/error');
 
    
 
