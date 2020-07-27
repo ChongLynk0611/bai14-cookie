@@ -1,15 +1,22 @@
-h1 Transaction
-a(href="/transaction/create") create transaction
-ul 
-    each transaction in transactions  
-        li
-            span id_Transaction: #{transaction.id}
-            if transaction.iscomplete 
-                span &nbsp  
-                span completed
-            else
-                span &nbsp
-                a(href="transaction/"+transaction.id+"/completed") complete
+extends ../layout/layout.pug 
+block content
+    h1 Transaction
+    a(href="/transaction/create").btn.btn-primary.ml-4 create transaction
+    table.table.mt-3.ml-2
+        tr  
+            th id_transaction
+            th isComplete
+     
+        each transaction in transactions  
+            tr
+                th  #{transaction.id}
+                th
+                    if transaction.iscomplete 
+                        span &nbsp  
+                        span completed
+                    else
+                        span &nbsp
+                        a(href="transaction/"+transaction.id+"/completed") complete
 
 
         

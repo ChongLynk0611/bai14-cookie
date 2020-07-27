@@ -1,7 +1,11 @@
-h1 create transaction
-form(action="/transaction" , method= "POST")
-    label id_Book
-    input(type="text" ,name="idBook") 
-    label id_user
-    input(type="text", name="idUser")
-    button submit
+extends ../layout/layout.pug 
+block content
+    h1 create transaction
+    form(action="/transaction" , method= "POST")
+        .form-group
+            
+            label id_Book
+            input(type="text" ,name="idBook").form-control
+            label id_user
+            input(type="text", name="idUser").form-control
+            button.btn.btn-primary.mt-2 submit
