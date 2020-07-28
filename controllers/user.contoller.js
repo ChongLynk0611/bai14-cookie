@@ -26,14 +26,6 @@ module.exports.delete = (req, res)=>{
 
 module.exports.postCreate = (req,res)=>{
     req.body.id = shortid.generate();
-    var error ="";
-    if(req.body.name.length>30){
-        error ="name no longger than 30 characters !";
-        res.render('users/create',{
-            error: error
-        })
-        return;
-    }
     db.get('users').push(req.body).write();
     res.redirect('/users');
 }
