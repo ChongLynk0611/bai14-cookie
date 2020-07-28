@@ -1,7 +1,11 @@
-h1 create users
-
-form(action="/users/create",method="POST")
-    lable name  
-    input(name="name")
-    button create
-a(href="/users") back
+extends ../layout/layout.pug 
+block content
+    h1 create users
+    if error
+        .alert.alert-danger=error
+    form(action="/users/create",method="POST")
+        .form-group.ml-4
+            lable name  
+            input(name="name").form-control
+            button.bt.btn-primary create
+    a(href="/users").btn.btn-dark back

@@ -1,12 +1,22 @@
-h1 list Users
+extends ../layout/layout.pug 
+block content
+    h1 list Users
 
-a(href="/users/create") add user
+    a(href="/users/create").btn.btn-primary.ml-4 add user
 
-ul  
-    each user in users
-        li
-            span #{user.name} 
-            span &nbsp
-            a(href="/users/edit/"+user.id) edit
-            span &nbsp
-            a(href="/users/delete/"+user.id) delete
+    table.table.ml-4
+        tr 
+            th Name
+            th Edit
+            th Delete
+        each user in users
+            tr
+                th #{user.name} 
+                th 
+                    a(href="/users/edit/"+user.id) edit
+                th
+                    a(href="/users/delete/"+user.id) delete
+                
+                
+                
+        
