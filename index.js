@@ -1,7 +1,7 @@
 
 var express = require("express");
 var app = express();
-
+var cookieParser = require('cookie-parser')
 var db = require('./db');
 var booksRouter = require('./routes/books.router');
 var usersRouter = require('./routes/users.router');
@@ -15,6 +15,7 @@ app.set('views', './views');
 app.use(express.json()) // for parsing application/json
 app.use(express.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
 app.use(express.static('public'));
+app.use(cookieParser());
 app.use('/books', booksRouter);
 app.use('/users', usersRouter);
 app.use('/transaction', transaction);

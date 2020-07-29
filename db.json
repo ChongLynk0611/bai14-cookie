@@ -1,11 +1,5 @@
 {
-  "books": [
-    {
-      "title": "truyen kieu nguyen du",
-      "description": "tam giet chet cam va cam hoi sinh thanh cay thi",
-      "id": "7qUJB4nNR"
-    }
-  ],
+  "books": [],
   "users": [
     {
       "name": "Linh",
